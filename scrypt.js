@@ -14,8 +14,3 @@ function numberOfPlayers(players, attemps) {
 
 //need to add range of secret numbers
 
-numberOfPlayers(10,5);
-
-for (let i = 0; i < playersInGame.length; i++) {
-
-}
