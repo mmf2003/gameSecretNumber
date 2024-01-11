@@ -12,4 +12,6 @@ function numberOfPlayers(players, attemps) {
     }
 }
 
-numberOfPlayers(5,5);
+//need to add range of secret numbers
+
+
