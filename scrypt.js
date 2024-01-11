@@ -2,11 +2,11 @@
 
 let playersInGame = [];
 
-function numberOfPlayers(players, attemps) {
+function numberOfPlayers(players, attemps, range) {
     for (let i = 0; i < attemps; i++) {
         let attemptX = [];
         for (let i = 0; i < players; i++) {
-            attemptX.push((Math.floor(Math.random() * 6)));
+            attemptX.push((Math.floor(Math.random() * (range + 1))));
         }
         playersInGame.push(attemptX);
     }
@@ -14,8 +14,8 @@ function numberOfPlayers(players, attemps) {
 
 //need to add range of secret numbers
 
-function game(players, attemps, secret) {
-    numberOfPlayers(players,attemps) 
+function game(players, attemps, range, secret) {
+    numberOfPlayers(players,attemps, range); 
 
     for (let i = 0; i < playersInGame.length; i++) {
         let attemp;
