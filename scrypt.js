@@ -1,6 +1,12 @@
 //create numberOfPlayers function
 
 let playersInGame = [];
+confirm('Do you want ot play a game???');
+let players = +prompt('How many players do you want???', '10');
+let secret = +prompt('What secret number do you want to guess???', '10');
+let range = +prompt('What range do you want to allow???', '100');
+let attemps = +prompt('How many attempts for players???', '10');
+
 
 function numberOfPlayers(players, attemps, range) {
     for (let i = 0; i < attemps; i++) {
@@ -23,6 +29,7 @@ function game(players, attemps, range, secret) {
             attemp = playersInGame[i][k];
             if (secret == playersInGame[i][k]) {
                 console.log(`Player${k+1} suggested that secret number is ${playersInGame[i][k]} and won on ${i+1} attempt`);
+                alert(`Player${k+1} suggested that secret number is ${playersInGame[i][k]} and won on ${i+1} attempt`);
                 break;
             }
             else {
@@ -33,4 +40,4 @@ function game(players, attemps, range, secret) {
     }
 }
 
-game(10,100,1000,10); //tests
+game(players, attemps, range, secret); //tests
